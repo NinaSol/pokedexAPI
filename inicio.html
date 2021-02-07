@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex | Busca tu Pokemon, información y noticias!</title>
+
+    <!-- CDN Bootstrap v5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+
+    <!--navbar-->
+    <div class="container pb-4">
+        <nav class="fixed-top navbar  navbar-expand-lg  navbar-light bg-light shadow">
+            <div class="container-fluid">
+                <!-- lOGO -->
+                <a class="navbar-brand IconPoke" href="inicio.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
+                        alt="" width="80" height="30">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <!-- ITEMS -->
+                    <ul class="nav justify-content-center ItemsNavbar col-lg-12">
+                        <li class="nav-item col-12 col-lg-2 text-center">
+                            <a style="color: black;" class="nav-link" aria-current="page" href="inicio.html">Inicio</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-2 text-center">
+                            <a style="color: black;" class="nav-link" aria-current="page"
+                                href="pokedex.html">Pokédex</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-2 text-center">
+                            <a style="color: black;" class="nav-link" aria-current="page"
+                                href="generarPokedex.html">Crear</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-2 text-center">
+                            <a style="color: black;" class="nav-link" href="#" onclick="AboutUs()">Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--navbar-->
+
+    <!--Inicio Carrousel-->
+    <div class="container-fluid">
+        <div class="row">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://as.com/meristation/imagenes/2020/02/12/noticias/1581488889_655258_1582040357_noticia_normal.jpg"
+                            class="img-fluid d-block w-100" alt="Pokemon Home">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://static.t13.cl/images/original/2019/09/1568558600-pokemon.jpg"
+                            class="d-block w-100 img-fluid" alt="Ash y Pikachu">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/09/como-conseguir-pikachu-gorra-pokemon-espada-escudo-2083655.jpg"
+                            class="d-block w-100 img-fluid" alt="Pikachu">
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!--Fin Carrousel-->
+
+        <!--Inicio Noticias-->
+        <div class="row pt-4 pb-2">
+            <h1 class="text-center text-warning">¡Nuestras Ultimas Noticias!</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="https://assets.pokemon.com/assets/cms2-es-xl/img/misc/_tiles/25th/25th-anniversary-169.jpg"
+                    class="card-img-top pt-3 img-fluid" alt="25th pokemon anyversary">
+
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-secondary">13 de ene. de 2021</p>
+                        <h5 class="card-title">Katy Perry participa en la celebración de los 25 años de Pokémon</h5>
+                        <p class="card-text">La ícono del pop se une a otros muchos artistas para celebrar los 25 años
+                            de Pokémon con música, retrospectivas, artículos de promoción.</p>
+
+                        <!-- Btn con modal, accede por  data-bs-target-->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#katyPerryModal">
+                            Ver más!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="https://assets.pokemon.com/assets/cms2-es-xl/img/attend-events/championship/2021-players-cup-iii/2021-players-cup-iii-169.jpg"
+                    class="card-img-top pt-3 img-fluid" alt="pokemonplayers cup">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-secondary">18 de dic. de 2020</p>
+                        <h5 class="card-title">La Copa de Jugadores Pokémon III comienza en enero de 2021</h5>
+                        <p class="card-text">Obtén toda la información que necesitas para participar y ver las
+                            competencias de JCC Pokémon, Pokémon Sword y Pokémon Shield.</p>
+                        <!-- Btn con modal, accede por  data-bs-target-->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#copaDeJugadoresModal">
+                            Ver más!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="https://assets.pokemon.com/assets/cms2-es-xl/img/watch-pokemon-tv/_tiles/movie22/est/movie22-169-es.jpg"
+                    class="card-img-top pt-3 img-fluid" alt="pokemonplayers cup">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-secondary">4 de dic. de 2020</p>
+                        <h5 class="card-title">Descarga, compra o ve la película Pokémon Mewtwo</h5>
+                        <p class="card-text">La película Pokémon Mewtwo contraataca: Evolución está disponible por
+                            primera vez para su compra digital en iTunes y Google Play.</p>
+                        <!-- Btn con modal, accede por  data-bs-target-->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#descargaMewtwo">
+                            Ver más!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--noticias 2da linea-->
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="https://assets.pokemon.com/assets/cms2-es-xl/img/trading-card-game/_tiles/strategy/swsh04/charizard/charizard-strategy-169-es.png"
+                    class="card-img-top pt-3 img-fluid" alt="pokemonplayers cup">
+
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-secondary">25 de nov. de 2020</p>
+                        <h5 class="card-title">Descubre tres estrategias para construir una baraja de Charizard</h5>
+                        <p class="card-text">Hemos pedido a tres de nuestros jugadores de cartas más experimentados que
+                            nos cuenten cómo crearían una baraja.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#descubreCharizard">
+                            Ver más!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="https://assets.pokemon.com/assets/cms2-es-xl/img/watch-pokemon-tv/_tiles/season04/season04-live-169-es.jpg"
+                    class="card-img-top pt-3 img-fluid" alt="pokemonplayers cup">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-secondary">29 de nov. de 2020</p>
+                        <h5 class="card-title">Ya están disponibles los episodios de liga de campeones</h5>
+                        <p class="card-text">Viaja por Johto con Ash, Misty y Brock mientras Ash obtiene Medallas de
+                            Gimnasio para competir en la Liga Johto.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#ligaDeCampeones">
+                            Ver más!
+                        </button>
+                        <!-- liga de campeones #5 -->
+                        <div class="modal fade" id="ligaDeCampeones" tabindex="-1" aria-labelledby="ligaDeCampeones"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="ligaDeCampeones">Ya están disponibles los episodios
+                                            de liga de
+                                            campeones</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img class="img-fluid"
+                                            src="https://assets.pokemon.com//assets/cms2-es-xl/img/watch-pokemon-tv/_tiles/season04/inline/04.jpg"
+                                            alt="">
+                                        <p>Las aventuras del querido Entrenador Pokémon en Johto continúan en la
+                                            temporada 4 de la serie Pokémon. Ash, Misty, Brock y sus Pokémon están de
+                                            nuevo en camino haciendo lo que mejor se les da: ganar Medallas de Gimnasio,
+                                            batallar contra el Equipo Rocket y ayudar a Pokémon en apuros. En cada
+                                            episodio, Ash se acerca un poco más a su objetivo de ganar suficientes
+                                            Medallas de Gimnasio para participar en la Liga Johto, y ahora puedes
+                                            acompañarlo de forma gratuita, ya que todos los episodios de la Liga de
+                                            Campeones Johto ya están disponibles en TV Pokémon. Pero antes, aquí tienes
+                                            algunos momentos destacados de la temporada 4 para darte una idea de qué
+                                            esperar y despertar tu curiosidad por más aventuras en Johto.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TV pokemon #5 -->
+                        <div class="modal fade" id="tvPokemon" tabindex="-1" aria-labelledby="tvPokemon"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="tvPokemon">Ya están disponibles los episodios de
+                                            liga de
+                                            campeones</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img class="img-fluid"
+                                            src="https://assets.pokemon.com/assets/cms2-es-xl/img/misc/pokemon-tv-app/pokemon-tv-app-169.jpg"
+                                            alt="">
+                                        <p>
+                                            Amedida que se acerca la temporada de deliciosos festines, es difícil no
+                                            pensar en los muchos Pokémon que también disfrutan de una buena comida, o
+                                            varias, en algunos casos. En un guiño a la temporada de fiestas y a la
+                                            deliciosa comida que se consumirá, en TV Pokémon estamos celebrándolo con
+                                            algunos de nuestros momentos culinarios favoritos de la serie Pokémon. Ya
+                                            sea un Snorlax con un apetito aparentemente insaciable o Mallow, la amiga de
+                                            Ash, preparando otra nueva y deliciosa receta, probablemente quieras tener
+                                            un bocadillo a la mano mientras engulles estos episodios que te harán la
+                                            boca agua.
+                                            Podrás disfrutar de esta deliciosa colección de episodios en TV Pokémon
+                                            hasta el 4 de diciembre. Recuerda que puedes ver TV Pokémon en
+                                            watch.pokemon.com/es-xl o a través de la app para dispositivos móviles TV
+                                            Pokémon.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="https://assets.pokemon.com/assets/cms2-es-xl/img/watch-pokemon-tv/_tiles/stunts/feast/ptv-feast-169-es.jpg"
+                    class="card-img-top pt-3 img-fluid" alt="pokemonplayers cup">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-secondary">1 de dic. de 2020</p>
+                        <h5 class="card-title">Disfruta del entretenimiento inspirado en las fiestas con la serie
+                            Pokémon en TV Pokémon</h5>
+                        <p class="card-text">Celebra las próximas vacaciones con sabrosos episodios disponibles por
+                            tiempo limitado.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#tvPokemon">
+                            Ver más!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Fin Noticias-->
+
+        <!--
+    Modals de noticias: importante!, dejar los modales abajo antes de script js
+    -->
+        <!-- Modal KatyPerri #1 -->
+        <div class="modal fade" id="katyPerryModal" tabindex="-1" aria-labelledby="katyPerryModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="katyPerryModal">Katy Perry participa en la celebración de los 25
+                            años de Pokémon</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 ml-auto">
+                                    <p>La ícono del pop se une a otros muchos artistas para celebrar los 25 años de
+                                        Pokémon con música, retrospectivas, artículos de promoción y mucho más.</p>
+                                    <p>Prepárate para la fiesta! En el 2021 celebramos los 25 años de Pokémon, un cuarto
+                                        de siglo de increíbles videojuegos, emocionante animación, fantásticas cartas y
+                                        muchas cosas más. Para conmemorar esta ocasión, habrá un año de celebraciones
+                                        con recuerdos de previos viajes a través del mundo Pokémon, colecciones
+                                        especiales del Juego de Cartas Coleccionables Pokémon y mucha más emoción que
+                                        está a punto de comenzar.</p>
+                                </div>
+
+                                <iframe width="560" height="340" src="https://www.youtube.com/embed/pBO-92G38Ik"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+
+                                <h2 class="pt-4 pb-2">25 años de diversión</h2>
+                                <p>El mundo Pokémon ha crecido considerablemente desde el lanzamiento de los primeros
+                                    videojuegos en Japón allá en el año 1996. Una historia como esta merece una
+                                    retrospectiva. Podrás revivir tus viajes a través de las muchas regiones de la serie
+                                    en un nuevo sitio web, que servirá como lugar de encuentro para las actividades de
+                                    celebración de los fans. Comenzarás con la región de Galar, región recientemente
+                                    descubierta en Pokémon Sword y Pokémon Shield hasta llegar finalmente a la clásica
+                                    región de Kanto de los juegos originales Pokémon Red y Pokémon Blue. Este sitio
+                                    también contará con eventos musicales mensuales y con muchos otros tipos de eventos
+                                    increíbles del 25 aniversario, ¡así que échale un vistazo para no perderte ni un
+                                    minuto de diversión!</p>
+
+                                <img src="https://assets.pokemon.com//assets/cms2-es-xl/img/misc/_tiles/25th/inline/01.jpg"
+                                    alt="">
+                                <p>Los jugadores de JCC Pokémon podrán disfrutar de colecciones con temática del 25
+                                    aniversario más adelante en 2021. Próximamente, los fans también podrán coleccionar
+                                    cartas de gran tamaño de Pikachu y de los queridos primeros compañeros de las
+                                    diferentes regiones, así como disfrutar de la celebración de los 25 años de Pokémon
+                                    a través de los dibujos animados de Pokémon y de las aplicaciones para dispositivos
+                                    móviles como Pokémon GO y Pokémon Masters EX. A medida que avance el año, habrá
+                                    anuncios aún más importantes.</p>
+
+                                <h3 class="pt-4 pb-2">25 años de diversión</h3>
+                                <p>Pokémon guarda todavía más sorpresas para el 2021. En efecto, Pokémon está
+                                    colaborando con marcas reconocidas como Levi's, McDonald's, Jazwares, Scholastic,
+                                    Mattel, Funko o The Wand Company para crear promociones y artículos únicos*.
+                                    Compartiremos más información acerca de otras colaboraciones a lo largo del año.
+
+                                    *La disponibilidad de los productos y promociones puede variar en función del
+                                    mercado.
+
+                                    Mientras tanto, las celebraciones arrancan con un tráiler especial que puedes ver
+                                    visitando el canal oficial de Pokémon en YouTube. Prepárate, ¡nos espera un año
+                                    emocionante lleno de nuevas aventuras!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Copa de Jugadores #2 -->
+        <div class="modal fade" id="copaDeJugadoresModal" tabindex="-1" aria-labelledby="copaDeJugadoresModal"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="copaDeJugadoresModal">La Copa de Jugadores Pokémon III comienza en
+                            enero de 2021</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 ml-auto">
+                                    <p>¡Preparate! El torneo en línea de la Copa de Jugadores Pokémon III se acerca.
+                                        Esta
+                                        emocionante competición tendrá lugar desde enero hasta abril de 2021, y en ella
+                                        veremos
+                                        a los mejores Entrenadores Pokémon del mundo enfrentarse por premios y
+                                        prestigio. La participación
+                                        en la Copa de Jugadores Pokémon III está abierta a todos los jugadores de la
+                                        categoría Máster,
+                                        y el torneo se realizará únicamente en línea.</p>
+
+                                    <p> Habrá tres competiciones diferentes dentro de la Copa de Jugadores Pokémon III:
+                                        una del Juego de Cartas
+                                        Coleccionables Pokémon, una de los videojuegos Pokémon Espada y Pokémon Escudo,
+                                        y otra del videojuego
+                                        Pokkén Tournament DX. Los jugadores que cumplan las condiciones para participar
+                                        podrán conseguir una plaza
+                                        para los Torneos Clasificatorios Regionales a través de eventos clasificatorios.
+                                        Para participar en estos eventos,
+                                        los jugadores DEBEN tener una cuenta del Club de Entrenadores Pokémon y un ID de
+                                        jugador antes del 18 de enero a las 10:00 a. m. PST.
+                                        Los jugadores de JCC Pokémon también tendrán que haber iniciado sesión en JCC
+                                        Pokémon Online con un ID de jugador que
+                                        esté vinculado a su cuenta del Club de Entrenadores Pokémon entre el 18 de
+                                        octubre y el 18 de enero para poder participar.</p>
+
+                                    <p> Los jugadores de los videojuegos Pokémon Espada y Pokémon Escudo combatirán en
+                                        el Torneo Clasificatorio de la Copa de
+                                        Jugadores Pokémon III para conseguir una plaza en su Torneo Clasificatorio
+                                        Regional. Los jugadores de videojuegos tienen
+                                        que tener su cuenta del Club de Entrenadores Pokémon vinculada a su cuenta de
+                                        Nintendo antes de que empiece el Torneo
+                                        Clasificatorio de la Copa de Jugadores Pokémon III. </p>
+                                    <p> Todos los eventos de la Copa de Jugadores III serán retransmitidos para que los
+                                        fans puedan ver los intensos combates y
+                                        animar a sus jugadores favoritos. Seguilos en <a
+                                            href="https://www.twitch.tv/pokemon" target="_blank">Twitch</a> o en <a
+                                            href="https://www.youtube.com/channel/UCp6YQGlRtUGKGJPxX-en6mw"
+                                            target="_blank">Youtube</a></p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Descarga Mewtwo #3 -->
+        <div class="modal fade" id="descargaMewtwo" tabindex="-1" aria-labelledby="descargaMewtwo" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="descargaMewtwo">Descarga, compra o ve la película Pokémon
+                            Mewtwo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 ml-auto">
+                                    <div class="col-md-12 ml-auto">
+                                        <p>
+                                            Los fans del Pokémon Genético están de suerte gracias a las nuevas opciones
+                                            disponibles para ver la película Pokémon
+                                            Mewtwo contraataca: Evolución. Por primera vez desde su estreno en cines en
+                                            2019 y en Netflix a principios de 2020,
+                                            la película está disponible en varias plataformas digitales que incluyen
+                                            iTunes y Google Play. La vigésima segunda película
+                                            que se desarrolla en el mundo Pokémon transporta a los fans en un
+                                            espectacular viaje a través de la región de Kanto,
+                                            en donde el Team Rocket está intentando crear un Pokémon destinado —como era
+                                            de esperar— a ser utilizado como una
+                                            herramienta de destrucción. Los fans de Pokémon pueden acompañar ahora a Ash
+                                            y sus amigos en sus intentos por salvar
+                                            el mundo de un furioso Mewtwo, ¡desde la comodidad de casa!</p>
+
+                                        <img class="imgMod img-fluid" src="assets/img/pokemonPeli.jpg" alt="">
+
+                                        <p>¿Podrán Ash y Pikachu evitar una catástrofe? ¿Y podrá Mewtwo descubrir un
+                                            nuevo propósito de vida más allá del diseñado por Giovanni?
+                                            ¡Descubrilo alquilando, comprando o descargando la película Pokémon Mewtwo
+                                            contraataca: Evolución en iTunes o Google Play!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Descubre Charizad #4 -->
+        <div class="modal fade" id="descubreCharizard" tabindex="-1" aria-labelledby="descubreCharizard"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="descubreCharizard">Descubre tres estrategias para construir una
+                            baraja de Charizard</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12 ml-auto">
+                                Construir una baraja de JCC Pokémon no es una tarea fácil, incluso cuando sabes en torno
+                                a qué Pokémon quieres construirla.
+                                Se trata de tomar muchas pequeñas decisiones sobre qué cartas de Pokémon, Entrenador y
+                                Energía pueden ayudarte más, hasta formar
+                                una baraja de 60 cartas que esté lista para el combate. Pero no todo el mundo toma las
+                                mismas decisiones, incluso cuando hablamos
+                                de jugadores de JCC Pokémon con muchos años de experiencia, a ninguno de ellos les falta
+                                la nueva carta de Charizard, descubre el fulgor inédito
+                                y el poder supremo de la expansión Espada y Escudo-Voltaje Vívido de JCC Pokémon, que
+                                llega cargada de más Pokémon V, ¡como Zarude,
+                                el Pokémon singular descubierto recientemente! Nuevos y exclusivos Pokémon increíbles
+                                irrumpirán en escena despidiendo destellos arcoíris,
+                                junto a los espléndidos Pokémon VMAX. ¡Haz que tu baraja y tu colección irradien color y
+                                chispas con la expansión Espada y Escudo-Voltaje Vívido!
+                                Conozcamos lo básico: Charizard es un Pokémon de tipo Fuego de Fase 2 con 170 PS. Su
+                                habilidad Instinto de Combate te permite mirar las tres
+                                primeras cartas de tu baraja, poner una de ellas en tu mano y descartar las otras dos.
+                                Su ataque Ascuas Regias hace 100 puntos de daño por dos Energías Fuego,
+                                y 50 puntos de daño más por cada carta de Partidario de Lionel que haya en tu pila de
+                                descartes.
+                            </div>
+                            <img class="imgMod" src="assets/img/charizardddd.png" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Noticias-->
+
+    <!--footer-->
+    <footer>
+        <div>
+            <h2 class="titleFoo">Pokémon</h2>
+            <ul class="ListFooter">
+                <!--modal-->
+                <button type="button" class="btn contacto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Contactanos
+                </button>
+                <!-- Modal body -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Contactanos</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-3" action="https://formspree.io/f/xrgojvkn" method="POST">
+                                    <div class="col-md-6">
+                                        <label for="validationDefault01" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" name="Nombre" id="validationDefault01"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="validationDefault02" class="form-label">Apellido</label>
+                                        <input type="text" class="form-control" name="Apellido" id="validationDefault02"
+                                            required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="inputGroupPrepend2">Email</span>
+                                            <input type="text" class="form-control" name="Email"
+                                                placeholder="mail@ejemplo.com" id="validationDefaultUsername"
+                                                aria-describedby="inputGroupPrepend2" required>
+                                        </div>
+                                    </div>
+                                    <div class="form col-lg-12 col-12">
+                                        <textarea style="border: 1px solid black; height: 30vh;" name="Mensaje"
+                                            class="form-control " id="validationTextarea"
+                                            placeholder="Escribir Mensaje Aca" required></textarea>
+                                        <label for="validationTextarea" class="form-label"></label>
+                                        <div class="invalid-feedback">Please enter a message in the textarea.</div>
+                                    </div>
+
+                                    <div class="col-8 mx-auto ">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2"
+                                                required>
+                                            <label class="form-check-label mx-auto text-center" for="invalidCheck2">
+                                                Aceptar Terminos y Condiciones
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary" type="submit">Submit form</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--modal fin-->
+                <li><a class="LinkFooter " href="https://www.instagram.com/pokemon/?hl=es" target="_blank">Instagram</a>
+                </li>
+                <li><a class="LinkFooter" href="https://twitter.com/pokemon?lang=es" target="_blank">Twitter</a></li>
+                <li><a class="LinkFooter" href="https://www.youtube.com/channel/UCp6YQGlRtUGKGJPxX-en6mw"
+                        target="_blank">Youtube</a></li>
+                <li><a class="LinkFooter" href="https://www.twitch.tv/pokemon" target="_blank">Twitch</a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <!-- Final del footer -->
+
+
+
+    <!--jq mail-->
+    <script src="assets/js/mailJQ.js"></script>
+    <!--js mail-->
+    <!--<script src="assets/js/mail.js"></script>-->
+    <!-- Custom JavaScrit-->
+    <script src="assets/js/pokemon.js"></script>
+
+    <!-- Bootstrap v5 Bundle with Popper -->
+    <script src="assets/js/router.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex | Busca tu Pokemon favorito!</title>
+    <!-- Custom css -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- CSS only bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!--navbar-->
+    <div class="container pb-4">
+        <nav class="fixed-top navbar  navbar-expand-lg  navbar-light bg-light shadow">
+            <div class="container-fluid">
+                <!-- lOGO -->
+                <a class="navbar-brand IconPoke" href="inicio.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
+                        alt="" width="80" height="30">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <!-- ITEMS -->
+                    <ul class="nav justify-content-center ItemsNavbar col-lg-12">
+                        <li class="nav-item col-12 col-lg-2 text-center">
+                            <a style="color: black;" class="nav-link" aria-current="page" href="inicio.html">Inicio</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-2 text-center">
+                            <a style="color: black;" class="nav-link" aria-current="page"
+                                href="pokedex.html">Pokédex</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-2 text-center">
+                            <a style="color: black;" class="nav-link" aria-current="page"
+                                href="generarPokedex.html">Crear</a>
+                        </li>
+                        <li class="nav-item col-12 col-lg-2 text-center">
+                            <a style="color: black;" class="nav-link" href="nosotros.html"
+                                onclick="AboutUs()">Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--navbar-->
+    <div id="mensaje" class="container-fluid col-12 col-lg-12 pt-5"></div>
+    <!-- Barra busqueda -->
+    <div class="container searchbar">
+        <div class="input-group">
+            <input type="search" class="form-control rounded" id="pokeNumber" placeholder="Search" aria-label="Buscar"
+                aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-primary" id="button">Buscar</button>
+        </div>
+    </div>
+    <!-- Barra busqueda -->
+    <div class="container pt-4">
+        <div class="row row-cols-1 row-cols-md-4 mx-auto" id="busqueda">
+
+        </div>
+    </div>
+    <div class="container pt-4">
+        <div class="row row-cols-1 row-cols-md-4" id="resultado">
+
+
+        </div>
+    </div>
+
+
+    <!--footer-->
+    <footer>
+        <div>
+            <h2 class="titleFoo">Pokémon</h2>
+            <ul class="ListFooter">
+                <!--modal-->
+                <button type="button" class="btn contacto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Contactanos
+                </button>
+                <!-- Modal body -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Contactanos</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-3" action="https://formspree.io/f/xrgojvkn" method="POST">
+                                    <div class="col-md-6">
+                                        <label for="validationDefault01" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" name="Nombre" id="validationDefault01"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="validationDefault02" class="form-label">Apellido</label>
+                                        <input type="text" class="form-control" name="Apellido" id="validationDefault02"
+                                            required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="inputGroupPrepend2">Email</span>
+                                            <input type="text" class="form-control" name="Email"
+                                                placeholder="mail@ejemplo.com" id="validationDefaultUsername"
+                                                aria-describedby="inputGroupPrepend2" required>
+                                        </div>
+                                    </div>
+                                    <div class="form col-lg-12 col-12">
+                                        <textarea style="border: 1px solid black; height: 30vh;" name="Mensaje"
+                                            class="form-control " id="validationTextarea"
+                                            placeholder="Escribir Mensaje Aca" required></textarea>
+                                        <label for="validationTextarea" class="form-label"></label>
+                                        <div class="invalid-feedback">Please enter a message in the textarea.</div>
+                                    </div>
+
+                                    <div class="col-8 mx-auto ">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2"
+                                                required>
+                                            <label class="form-check-label mx-auto text-center" for="invalidCheck2">
+                                                Aceptar Terminos y Condiciones
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary" type="submit">Submit form</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--modal fin-->
+                <li><a class="LinkFooter " href="https://www.instagram.com/pokemon/?hl=es" target="_blank">Instagram</a>
+                </li>
+                <li><a class="LinkFooter" href="https://twitter.com/pokemon?lang=es" target="_blank">Twitter</a></li>
+                <li><a class="LinkFooter" href="https://www.youtube.com/channel/UCp6YQGlRtUGKGJPxX-en6mw"
+                        target="_blank">Youtube</a>
+                </li>
+                <li><a class="LinkFooter" href="https://www.twitch.tv/pokemon" target="_blank">Twitch</a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <!-- Final del footer -->
+    <!--js mail-->
+    <script src="assets/js/mail.js"></script>
+    <!--pokemon js-->
+    <!--<script src="assets/js/pokemon.js"></script>-->
+    <!--<script src="assets/js/router.js.js"></script>-->
+    <!--jquery cdn-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!--bootstrap js cdn-->
+    <!--jquery script-->
+    <script src="assets/js/pokemonJQuery.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

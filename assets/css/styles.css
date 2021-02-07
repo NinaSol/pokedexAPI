@@ -1,0 +1,74 @@
+
+footer{
+
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color:#F5E339;
+    
+}
+
+
+
+li{
+    list-style:none;
+}   
+
+.contenedor{
+    height:calc(100vh - 200px - 40px);
+    width: 100%;
+
+}
+
+.IconPoke{
+    margin-right: 0;
+    margin-left: 30px;
+    float:left;
+}
+.ItemsNavbar{
+    padding-right: 8rem;
+}
+
+
+
+
+.LinkFooter{
+    color:#000000;
+    text-decoration: none;
+}
+
+.instagram:hover{
+    color:#405DE6;
+
+}
+
+.ListFooter{
+    padding: 0;
+}
+.titleFoo{
+    font-family: 'Titan One', cursive;
+}
+.imgMod{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.contacto{
+    color: #000000;
+    font-size: 10px;
+    background-color:#F5E339;
+    border: solid 2px #000000;
+}
+
+.searchbar {
+    padding-top: 100px;
+}
+.tarjetas[hidden] {
+    display: block;
+    visibility: hidden;
+  }
+  #searchResult{
+      width: 300px;
+  }
